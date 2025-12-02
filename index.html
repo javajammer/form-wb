@@ -199,17 +199,17 @@
             ) : (
               <form onSubmit={handleSubmit} noValidate className="space-y-5">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                  <FormField label="Nama Pelapor" id="namaPelapor" type="text" value={formData.namaPelapor} onChange={handleChange} placeholder="isi dengan nama pelapor" error={errors.namaPelapor} />
-                  <FormField label="No. Telfon Pelapor" id="notelPelapor" type="text" value={formData.notelPelapor} onChange={handleChange} placeholder="08123456789" error={errors.notelPelapor} />
-                  <FormField label="Email Pelapor" id="emailPelapor" type="text" value={formData.emailPelapor} onChange={handleChange} placeholder="email@email.com" error={errors.emailPelapor} />
-                  <FormField label="Nama Terlapor" id="namaTerlapor" type="textarea" value={formData.namaTerlapor} onChange={handleChange} placeholder="isi dengan nama terlapor" error={errors.namaTerlapor} />
+                <FormField label="Nama Pelapor" id="namaPelapor" type="text" value={formData.namaPelapor} onChange={handleChange} placeholder="isi dengan nama pelapor" required error={errors.namaPelapor} />
+                <FormField label="No. Telfon Pelapor" id="notelPelapor" type="text" value={formData.notelPelapor} onChange={handleChange} placeholder="08123456789" required error={errors.notelPelapor} />
+                <FormField label="Email Pelapor" id="emailPelapor" type="text" value={formData.emailPelapor} onChange={handleChange} placeholder="email@email.com" required error={errors.emailPelapor} />
+                <FormField label="Nama Terlapor" id="namaTerlapor" type="textarea" value={formData.namaTerlapor} onChange={handleChange} placeholder="isi dengan nama terlapor" required error={errors.namaTerlapor} />
                 </div>
 
                 <FormField label="Jabatan Terlapor" id="jabatanTerlapor" type="textarea" value={formData.jabatanTerlapor} onChange={handleChange} placeholder="isi dengan jabatan terlapor" error={errors.jabatanTerlapor} />
                 <FormField label="Waktu Kejadian" id="waktuKejadian" type="textarea" value={formData.waktuKejadian} onChange={handleChange} placeholder="isi dengan waktu kejadian" required error={errors.waktuKejadian} />
                 <FormField label="Lokasi Kejadian" id="lokasiKejadian" type="textarea" value={formData.lokasiKejadian} onChange={handleChange} placeholder="isi dengan waktu kejadian" required error={errors.lokasiKejadian} />
                 <FormField label="Kronologis Kejadian" id="kronologiKejadian" type="textarea" value={formData.kronologiKejadian} onChange={handleChange} placeholder="isi dengan kronologi kejadian" required error={errors.kronologiKejadian} />
-                <FormField label="Nominal (jika ada)" id="nominal" type="text" value={formData.nominal} onChange={handleChange} placeholder="isi dengan angka nominal jika ada" error={errors.nominal} />
+                <FormField label="Nominal (jika ada)" id="nominal" type="text" value={formData.nominal} onChange={handleChange} placeholder="isi dengan angka nominal jika ada" required error={errors.nominal} />
 
                 {submissionError && (
                   <div className="p-3 bg-red-100 dark:bg-red-900/50 border border-red-400 text-red-700 dark:text-red-300 rounded-lg text-sm">
