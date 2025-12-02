@@ -119,14 +119,14 @@
           return false;
         }
         const newErr = {};
-        if (formData.namaPelapor && !urlRegex.test(formData.namaPelapor)) newErr.namaPelapor = "nama pelapor kosong";
-        if (formData.notelPelapor && !urlRegex.test(formData.notelPelapor)) newErr.notelPelapor = "nomor telepon pelapor kosong";
-        if (formData.emailPelapor && !urlRegex.test(formData.emailPelapor)) newErr.emailPelapor = "email pelapor kosong";
-        if (formData.namaTerlapor && !urlRegex.test(formData.namaTerlapor)) newErr.namaTerlapor = "nama terlapor kosong.";
-        if (formData.jabatanTerlapor && !urlRegex.test(formData.legalUrl)) newErr.legalUrl = "URL tidak valid.";
-        if (!formData.waktuKejadian) newErr.jabatanTerlapor = "Wajib diisi.";
-        if (!formData.lokasiKejadian) newErr.purpose = "Wajib diisi.";
-        if (!formData.kronologiKejadian) newErr.dataUsed = "Wajib diisi.";
+        if (!formData.namaPelapor newErr.namaPelapor = "nama pelapor kosong";
+        if (!formData.notelPelapor newErr.notelPelapor = "nomor telepon pelapor kosong";
+        if (!formData.emailPelapor newErr.emailPelapor = "email pelapor kosong";
+        if (!formData.namaTerlapor newErr.namaTerlapor = "nama terlapor kosong.";
+        if (!formData.jabatanTerlapor newErr.jabatanTerlapor = "URL tidak valid.";
+        if (!formData.waktuKejadian) newErr.waktuKejadian = "Wajib diisi.";
+        if (!formData.lokasiKejadian) newErr.lokasiKejadian = "Wajib diisi.";
+        if (!formData.kronologiKejadian) newErr.kronologiKejadian = "Wajib diisi.";
         setErrors(newErr);
         return Object.keys(newErr).length === 0;
       };
