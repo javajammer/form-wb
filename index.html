@@ -92,7 +92,7 @@
       const [errors, setErrors] = useState({});
       const [submissionError, setSubmissionError] = useState(null);
 
-      const GOOGLE_SCRIPT_URL = "https://script.google.com/a/macros/infokes.co.id/s/AKfycbznUjqGfZdGRh8ssAcpGq46vzqD9i15zpBpBX8zMQsBVtFtl-MvmkRqaxGNfewnhCcEmA/exec";
+      const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbznUjqGfZdGRh8ssAcpGq46vzqD9i15zpBpBX8zMQsBVtFtl-MvmkRqaxGNfewnhCcEmA/exec";
 
       const [clientIP, setClientIP] = useState("");
       useEffect(() => {
@@ -209,7 +209,7 @@
                 <FormField label="Waktu Kejadian" id="waktuKejadian" type="textarea" value={formData.waktuKejadian} onChange={handleChange} placeholder="isi dengan waktu kejadian" required error={errors.waktuKejadian} />
                 <FormField label="Lokasi Kejadian" id="lokasiKejadian" type="textarea" value={formData.lokasiKejadian} onChange={handleChange} placeholder="isi dengan waktu kejadian" required error={errors.lokasiKejadian} />
                 <FormField label="Kronologis Kejadian" id="kronologiKejadian" type="textarea" value={formData.kronologiKejadian} onChange={handleChange} placeholder="isi dengan kronologi kejadian" required error={errors.kronologiKejadian} />
-                <FormField label="Nominal (jika ada)" id="nominal" type="text" value={formData.nominal} onChange={handleChange} placeholder="isi dengan angka nominal jika ada" required error={errors.nominal} />
+                <FormField label="Nominal (jika ada)" id="nominal" type="text" value={formData.nominal} onChange={handleChange} placeholder="isi dengan angka nominal jika ada" error={errors.nominal} />
 
                 {submissionError && (
                   <div className="p-3 bg-red-100 dark:bg-red-900/50 border border-red-400 text-red-700 dark:text-red-300 rounded-lg text-sm">
